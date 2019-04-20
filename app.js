@@ -48,17 +48,31 @@ function init() {
 
 
 function isGameOver(){
+  let temp = copy(grid);
+  let temp2 = copy(grid);
+  let check = true;
+
+  pressArrowUp(temp2);
+  pressArrowDown(temp2);
+  pressArrowLeft(temp2);
+  pressArrowRight(temp2);
+
   for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
-      if(grid[j][i] === 0) return false;
+      if(grid[i][j] === 0){
+        check = false;
+      }
     }
   }
-  return true;
+
+  if(compareTwoArray(temp,temp2) && check) return true;
+
+  return false;
 }
 
 function pressButton(func){
   let pass = copy(grid);
-  func();
+  func(grid);
   if(!compareTwoArray(pass,grid)){
     randomBox();
     render();
@@ -82,19 +96,19 @@ function render() {
   screen.innerHTML = templateStr;
 }
 
-function pressArrowRight() {
+function pressArrowRight(grid) {
   for (let i = 0; i < 4; i++) {
     grid[i] = slide(grid[i]);
   }
 }
 
-function pressArrowLeft() {
+function pressArrowLeft(grid) {
   for (let i = 0; i < 4; i++) {
     grid[i] = wrap(slide(grid[i]));
   }
 }
 
-function pressArrowDown() {
+function pressArrowDown(grid) {
   for (let i = 0; i < 4; i++) {
     let arr = slide(getColumn(grid, i));
     for (let j = 0; j < 4; j++) {
@@ -103,7 +117,7 @@ function pressArrowDown() {
   }
 }
 
-function pressArrowUp() {
+function pressArrowUp(grid) {
   for (let i = 0; i < 4; i++) {
     let arr = wrap(slide(getColumn(grid, i)));
     for (let j = 0; j < 4; j++) {
