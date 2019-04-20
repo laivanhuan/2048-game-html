@@ -41,6 +41,7 @@ function init() {
     [0, 0, 0, 0],
     [0, 0, 0, 0]
   ];
+  message.innerHTML = '';
   randomBox();
   randomBox();
   render();
