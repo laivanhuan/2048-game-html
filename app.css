@@ -1,0 +1,104 @@
+#wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+
+}
+.message{
+  width: 300px;
+  font-family: sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  color: #E2462D;
+  text-align: center;
+}
+.control{
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.btn{
+  display: inline-block;
+  padding: 8px 15px;
+  color: #fff;
+  font-size: 18px;
+  background: #7D7067;
+  cursor: pointer;
+}
+.screen{
+  border: 5px solid #B9AD9F;
+  margin: 20px auto;
+  width: 300px;
+  height: 300px;
+  background: #CBBFB3;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box{
+  box-sizing: border-box;
+  width: 75px;
+  height: 75px;
+  border: 5px solid #B9AD9F;
+}
+.box-item{
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+.color-2{
+  background: #EEE1D8!important;
+  color: #7D7067;
+}
+.color-4{
+  background: #DFD2BF;
+  color: #817463;
+}
+.color-8{
+  background: #F0AE79;
+  color: #FFF;
+}
+.color-16{
+  background: #F79264;
+  color: #FFF;
+}
+.color-32{
+  background: #BDD186;
+  color: #FFF;
+}
+.color-64{
+  background: #CB6501;
+  color: #FFF;
+}
+.color-128{
+  background: #E2462D;
+  color: #FFF;
+}
+.color-256{
+  background: #CB6501;
+  color: #FFF;
+}
+.color-512{
+  background: #FC9734;
+  color: #FFF;
+}
+.color-1024{
+  background: #E3BA14;
+  color: #FFF;
+}
+.color-2048{
+  background: #7AC66C;
+  color: #FFF;
+}
+.color-4096{
+  background: #60D994;
+  color: #FFF;
+}
